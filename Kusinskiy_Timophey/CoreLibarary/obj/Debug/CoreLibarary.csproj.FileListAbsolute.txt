@@ -1,0 +1,6 @@
+D:\мусорка лабороторок\Курсовая ООП\Kusinskiy_Timophey\CoreLibarary\bin\Debug\CoreLibarary.dll
+D:\мусорка лабороторок\Курсовая ООП\Kusinskiy_Timophey\CoreLibarary\bin\Debug\CoreLibarary.pdb
+D:\мусорка лабороторок\Курсовая ООП\Kusinskiy_Timophey\CoreLibarary\obj\Debug\CoreLibarary.csproj.CoreCompileInputs.cache
+D:\мусорка лабороторок\Курсовая ООП\Kusinskiy_Timophey\CoreLibarary\obj\Debug\CoreLibarary.dll
+D:\мусорка лабороторок\Курсовая ООП\Kusinskiy_Timophey\CoreLibarary\obj\Debug\CoreLibarary.pdb
+D:\мусорка лабороторок\Курсовая ООП\Kusinskiy_Timophey\CoreLibarary\obj\Debug\CoreLibarary.csprojAssemblyReference.cache

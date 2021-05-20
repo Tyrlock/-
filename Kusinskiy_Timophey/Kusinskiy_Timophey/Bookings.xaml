@@ -1,0 +1,115 @@
+﻿<Window x:Class="Kusinskiy_Timophey.Bookings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:Kusinskiy_Timophey"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Заказы" 
+        Height="700" 
+        Width="800" 
+        Background="#333" 
+        Loaded="Window_Loaded"
+        Icon="Images/Icon_Resor.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="205*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock TextWrapping="Wrap" Text="Резервация" FontSize="20" Grid.Row="1" Grid.Column="3" TextAlignment="Center" Grid.ColumnSpan="1" Foreground="#FFEEEFFF"/>
+        <TextBox x:Name="txtClientName" TextWrapping="Wrap" Grid.Row="4" Grid.Column="1" FontSize="11" Grid.RowSpan="1" Grid.ColumnSpan="4" PreviewTextInput="txtClientName_PreviewTextInput" Height="Auto" MaxLength="50"/>
+        <TextBox x:Name="txtSeats" TextWrapping="Wrap" Grid.Row="10" Grid.Column="1" FontSize="11" Grid.RowSpan="1" Grid.ColumnSpan="4" PreviewTextInput="txtSeats_PreviewTextInput" Height="Auto" MaxLength="2"/>
+        <TextBox x:Name="txtPhone" TextWrapping="Wrap" Grid.Row="12" Grid.Column="1" FontSize="11" Grid.ColumnSpan="4" PreviewTextInput="txtPhone_PreviewTextInput" Height="Auto" MaxLength="13"/>
+        <Button x:Name="btnAdd" Content="Добавить" Click="ButtonAdd_Click" Grid.Row="16" Grid.Column="3"/>
+        <DatePicker x:Name="Date" HorizontalAlignment="Left" Grid.Row="6" Grid.Column="1" FontSize="18" Width="133" SelectedDateChanged="Date_SelectedDateChanged" Margin="0,2,0,1" PreviewTextInput="Date_PreviewTextInput" Grid.ColumnSpan="2"/>
+
+        <ListView x:Name="ListViewBookings" Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="6">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding ClientName}" 
+                        Header="Имя клиента" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding DataTimeBooking}" 
+                        Header="Дата заказа" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding ClientPhoneNumber}" 
+                        Header="Номер телефона" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Seats}" 
+                        Header="Количество мест" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding TableId}" 
+                        Header="Номер столика" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding UpdatedBy}" 
+                        Header="Создано" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding UpdatedDate}" 
+                        Header="Дата создания" Width="Auto"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <xctk:TimePicker x:Name="Time" Value="{Binding CurrentDateTime}" Grid.Row="8" Grid.Column="1" FontSize="11" TextAlignment="Center" Grid.ColumnSpan="4" PreviewTextInput="Time_PreviewTextInput" Background="#FF525252" Foreground="#FFEEEFFF"/>
+        <ListView x:Name="ListViewTables" Grid.Row="1" Grid.Column="6" Grid.RowSpan="14">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Name}" 
+                        Header="Номер столика" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding TotalSeats}" 
+                        Header="Количество мест" Width="Auto"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock TextWrapping="Wrap" Text="ФИО пользователя" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Дата" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Время" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Количество мест" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Номер телефона клиента" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Номер столика" Grid.Row="13" Grid.Column="1" Margin="0,0,35,0" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <ComboBox x:Name="Combobox_number_of_Table" Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" Height="Auto">
+            <TextBlock x:Name="first" TextAlignment="Center">1</TextBlock>
+            <TextBlock x:Name="second" TextAlignment="Center">2</TextBlock>
+            <TextBlock x:Name="third" TextAlignment="Center">3</TextBlock>
+            <TextBlock x:Name="fourth" TextAlignment="Center">4</TextBlock>
+            <TextBlock x:Name="fifth" TextAlignment="Center">5</TextBlock>
+            <TextBlock x:Name="sixth" TextAlignment="Center">6</TextBlock>
+            <TextBlock x:Name="Seventh" TextAlignment="Center">7</TextBlock>
+        </ComboBox>
+        <Button x:Name="btnExit" Content="Ок" Click="btnExit_Click" Grid.Row="20" Grid.Column="1"/>
+    </Grid>
+</Window>

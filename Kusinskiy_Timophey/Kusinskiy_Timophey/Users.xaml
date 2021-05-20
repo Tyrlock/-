@@ -1,0 +1,71 @@
+﻿<Window x:Class="Kusinskiy_Timophey.Users"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kusinskiy_Timophey"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Пользователи" 
+        Height="600" 
+        Width="1000" 
+        Background="#333"
+        Icon="Images/Icon_Resor.png" 
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="328*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="585*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="ListViewUsers" SelectionChanged="ListViewUsers_SelectionChanged" Grid.Column="6" Grid.Row="1" Grid.RowSpan="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Name}" 
+                      Header="Имя" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Phone}" 
+                      Header="Телефон" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Email}" 
+                      Header="Емейл" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=RoleId}" 
+                      Header="Роль" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnDel" Content="Удалить" Click="btnDel_Click" Grid.Row="1" Grid.Column="4"/>
+        <Button x:Name="btnEdite" Content="Изменить" Click="BtnEdit_Click" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtPhone" TextWrapping="Wrap" FontSize="10" Grid.Row="4" Grid.ColumnSpan="4" Grid.Column="1" PreviewTextInput="txtPhone_PreviewTextInput" Height="Auto" MaxLength="13"/>
+        <TextBox x:Name="txtEmail" TextWrapping="Wrap" Grid.Row="6" Grid.ColumnSpan="4" Grid.Column="1" FontSize="10" Height="Auto" PreviewTextInput="txtEmail_PreviewTextInput" MaxLength="25"/>
+        <ComboBox x:Name="combobox_Role" Grid.Row="8" Grid.ColumnSpan="4" Grid.Column="1" FontSize="15">
+            <TextBlock x:Name="txtAdminr">Администратор</TextBlock>
+            <TextBlock x:Name="txtUserr">Пользователь</TextBlock>
+        </ComboBox>
+        <TextBlock TextWrapping="Wrap" Text="Мобильный телефон" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Электронная почта" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <TextBlock TextWrapping="Wrap" Text="Должность" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#FFEEEFFF"/>
+        <Button x:Name="btnExit" Content="Ок" Click="btnExit_Click" Grid.Row="10" Grid.Column="1" Grid.RowSpan="1"/>
+    </Grid>
+</Window>

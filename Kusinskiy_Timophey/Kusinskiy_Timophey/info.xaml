@@ -1,0 +1,51 @@
+﻿<Window x:Class="Kusinskiy_Timophey.info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kusinskiy_Timophey"
+        mc:Ignorable="d"
+        Title="Информация о блюде" 
+        Height="400" 
+        Width="700"
+        Background="#333" 
+        Icon="Images/Icon_Resor.png"
+        WindowStartupLocation="CenterScreen" 
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="147*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imageOfProduct" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4"/>
+        <TextBlock x:Name="txtName" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" TextAlignment="Center" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="1" Foreground="#FFEEEFFF" FontSize="20" Grid.RowSpan="2"/>
+        <TextBlock x:Name="txtDescription" TextWrapping="Wrap" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="4" Foreground="#FFEEEFFF"/>
+        <Button x:Name="btnExit" Content="Ок" Grid.Column="1" Grid.Row="8" Click="btnExit_Click"/>
+        <TextBlock x:Name="txtCost" TextWrapping="Wrap" Grid.Column="6" Grid.Row="6" Foreground="#FFEEEFFF" Grid.ColumnSpan="3"/>
+        <TextBlock Grid.Column="5" Grid.Row="3" TextWrapping="Wrap" Text="Состав:" Foreground="#FFEEEFFF" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="5" Grid.Row="6" TextWrapping="Wrap" Text="Стоимость:" Foreground="#FFEEEFFF"/>
+
+    </Grid>
+</Window>
