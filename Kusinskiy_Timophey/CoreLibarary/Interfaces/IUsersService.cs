@@ -1,8 +1,9 @@
-﻿using System.Collections.ObjectModel;
-using CoreLibarary.Models;
-
-namespace CoreLibarary.Interfaces
+﻿namespace CoreLibarary.Interfaces
 {
+    using System.Collections.ObjectModel;
+    using CoreLibarary.Models;
+
+
     public interface IUsersService
     {
         User CurrentUser { get; }

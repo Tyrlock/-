@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Data.SqlClient;
-
-using CoreLibarary.Interfaces;
-using CoreLibarary.Models;
-
-namespace CoreLibarary.Repositories
+﻿namespace CoreLibarary.Repositories
 {
+    using System;
+    using System.Collections.ObjectModel;
+    using System.Data.SqlClient;
+
+    using CoreLibarary.Interfaces;
+    using CoreLibarary.Models;
+
+
     public class SQLMenuRepository : IMenuRepository
     {
         string connectionString =

@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
-using CoreLibarary.Interfaces;
-using CoreLibarary.Models;
-
+﻿
 namespace CoreLibarary.Services
 {
+    using System;
+    using System.Collections.ObjectModel;
+    using System.Security.Cryptography;
+    using System.Text;
+    using System.Text.RegularExpressions;
+    using CoreLibarary.Interfaces;
+    using CoreLibarary.Models;
+
     /// <summary>
     /// Users Service implementation
     /// </summary>

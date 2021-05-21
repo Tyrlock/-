@@ -4,6 +4,7 @@ using System;
 using System.Text.RegularExpressions;
 using System.Windows;
 
+
 namespace Kusinskiy_Timophey
 {
     /// <summary>
@@ -23,7 +24,7 @@ namespace Kusinskiy_Timophey
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ListViewBookings.ItemsSource = _BookingsService.Get();
+            ListViewBookings.ItemsSource = _BookingsService.Bookings;
             ListViewTables.ItemsSource = _BookingsService.Tables;
             Date.BlackoutDates.AddDatesInPast();
         }

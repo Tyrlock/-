@@ -1,12 +1,13 @@
-﻿using System.Data.SqlClient;
-using System.Windows;
-
-using CoreLibarary.Interfaces;
-using CoreLibarary.Repositories;
-using CoreLibarary.Services;
-
-namespace Kusinskiy_Timophey
+﻿namespace Kusinskiy_Timophey
 {
+    using System.Data.SqlClient;
+    using System.Windows;
+
+    using CoreLibarary.Interfaces;
+    using CoreLibarary.Repositories;
+    using CoreLibarary.Services;
+
+
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>

@@ -13,5 +13,7 @@ namespace CoreLibarary.Interfaces
         ObservableCollection<Reviews> Reviews { get; }
 
         ObservableCollection<Reviews> Get();
+
+
     }
 }
