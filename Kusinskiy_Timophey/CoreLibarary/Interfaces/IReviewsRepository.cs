@@ -11,6 +11,5 @@ namespace CoreLibarary.Interfaces
             int name);
 
         ObservableCollection<Reviews> Get();
-
     }
 }

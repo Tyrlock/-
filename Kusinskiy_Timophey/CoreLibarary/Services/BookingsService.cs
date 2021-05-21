@@ -1,7 +1,7 @@
-﻿using CoreLibarary.Interfaces;
+﻿using System;
+using CoreLibarary.Interfaces;
 using CoreLibarary.Models;
 using System.Collections.ObjectModel;
-using System;
 using System.Text.RegularExpressions;
 
 namespace CoreLibarary.Services

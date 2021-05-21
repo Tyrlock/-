@@ -2,7 +2,6 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Forms;
 using System.Windows.Input;
 using CoreLibarary.Interfaces;
 using CoreLibarary.Models;
@@ -103,7 +102,7 @@ namespace Kusinskiy_Timophey
             view.Filter = UserFilter;
             var date = Calendar.SelectedDate;
 
-            ListViewBookings.ItemsSource = _BookingsService.Bookings;
+            ListViewBookings.ItemsSource = _BookingsService.Get();
 
             if (date.HasValue)
             {

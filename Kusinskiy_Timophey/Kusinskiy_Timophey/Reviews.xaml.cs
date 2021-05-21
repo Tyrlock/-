@@ -1,7 +1,6 @@
 ﻿using CoreLibarary.Interfaces;
 using CoreLibarary.Models;
 using System;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 

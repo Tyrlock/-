@@ -1,7 +1,7 @@
-﻿namespace CoreLibarary.Models
-{
-    using System;
+﻿using System;
 
+namespace CoreLibarary.Models
+{
     public enum Category
     {
         Drinks = 1,

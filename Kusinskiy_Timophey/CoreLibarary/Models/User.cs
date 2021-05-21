@@ -1,11 +1,11 @@
 ﻿namespace CoreLibarary.Models
 {
-
     public enum Roles
         {
             Administrator = 1,
             User = 2
         }
+
     public class User
     {
         public int Id { get; set; }

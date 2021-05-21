@@ -1,12 +1,12 @@
-﻿namespace CoreLibarary.Repositories
+﻿using System;
+using System.Data.SqlClient;
+using System.Collections.ObjectModel;
+
+using CoreLibarary.Interfaces;
+using CoreLibarary.Models;
+
+namespace CoreLibarary.Repositories
 {
-    using System;
-    using System.Data.SqlClient;
-    using System.Collections.ObjectModel;
-
-    using CoreLibarary.Interfaces;
-    using CoreLibarary.Models;
-
     public class SQLUsersRepository : IUsersRepository
     {
         string connectionString =
@@ -47,7 +47,7 @@
 
         public bool Delete(int userId)//Удаление пользователей
         {
-            var queryString = "Delete from Users where id=@id";//sql запрос
+            var queryString = "Delete from Reviews where CreatedBy=@id;Delete from Reviews where RecepientId=@id;Delete from Bookings where UpdatedBy=@id;Delete from Menu where UpdatedBy=@id;Delete from Users where id=@id;";//sql запрос
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Create the Command and Parameter objects.
